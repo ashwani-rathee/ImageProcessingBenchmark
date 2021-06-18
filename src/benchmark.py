@@ -17,7 +17,7 @@ orig_phantom = img_as_ubyte(data.shepp_logan_phantom())
 
 list = ["dilation","erosion","opening","closing","white_tophat","black_tophat"]
 data = pd.read_csv("result.csv")
-print(data)
+# print(data)
 count = 0
 for i in list:
     selem = disk(6)
@@ -28,11 +28,11 @@ for i in list:
     resultlink = "results/python/{}.png".format(i)
     data.at[count,"resultlinkpy"] = resultlink
     count +=1
-    io.imsave("results/python/$i.png", result)
+    io.imsave("results/python/{}.png".format(i), result)
 
 print(data)
 data.to_csv('result.csv')
 
-data["py/jl"] = data["timetakenpy"]/data["timetaken"]
+data["py/jl"] = data["timetakenpy"]/data["timetakenjl"]
 print(data)
 data.to_csv('result.csv')

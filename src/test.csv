@@ -1,0 +1,7 @@
+operations,timetakenjl,resultlink,timetakenpy,resultlinkpy
+dilate,0.0066608058219544885,results/julia/dilate.png,0.0,/
+erode,0.006472791321196363,results/julia/erode.png,0.0,/
+opening,0.013833158980609427,results/julia/opening.png,0.0,/
+closing,0.012702827043257005,results/julia/closing.png,0.0,/
+tophat,0.01256259143828716,results/julia/tophat.png,0.0,/
+bothat,0.013324765146666674,results/julia/bothat.png,0.0,/

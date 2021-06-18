@@ -11,7 +11,14 @@ function start_benchmark()
 
     println("ImageMorphology Benchmark")
     imagemorphologyjl = DataFrame(
-        
+        type=[
+            "morphology",
+            "morphology",
+            "morphology",
+            "morphology",
+            "morphology",
+            "morphology",
+        ], 
         operations=[
             # Operations
             "dilate",
@@ -29,14 +36,14 @@ function start_benchmark()
     count = 1
     original = TestImages.shepp_logan(512)
 
-    println(imagemorphologyjl)
-    for i in imagemorphologyjl[!, 1]
+    # println(imagemorphologyjl)
+    for i in imagemorphologyjl[!, 2]
         benchmark = @benchmark getfield(Images, Symbol($i))($original)
         # print(benchmark)
         result = getfield(Images, Symbol(i))(original)
         save("results/julia/$i.png", result)
-        imagemorphologyjl[!, 2][count] = minimum(benchmark).time * 10^-12 *10^3
-        imagemorphologyjl[!, 3][count] = "results/julia/$i.png"
+        imagemorphologyjl[!, 3][count] = mean(benchmark).time * 10^-12 *10^3
+        imagemorphologyjl[!, 4][count] = "results/julia/$i.png"
         count += 1
     end
     println(imagemorphologyjl)
