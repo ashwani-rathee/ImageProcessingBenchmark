@@ -1,0 +1,12 @@
+name = "benchmark"
+uuid = "5e78ebcb-2475-414f-b7ea-38e8ae0474d1"
+authors = ["Ashwani Rathee <ab669522@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+TestImages = "5e47fb64-e119-507b-a336-dd2b206d9990"
