@@ -18,17 +18,16 @@ for i in list
     for j in 1:nrow(data)
         row = data[j,:] 
         write(f, "<details>
-        <summary>$(row.operations)</summary> \n")
+<summary>$(row.operations)</summary> \n")
         write(f,"""
-        | Operations       | Julia         | Python  |
-        | -----------------|:-------------:| -----:|
-        | $(row.operations)| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/$(row.resultlink)) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/$(row.resultlinkpy)) |
-        | $(row.operations)| $(row.timetakenjl)      |   $(row.timetakenpy) |
 
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| $(row.operations)| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/$(row.resultlink)) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/$(row.resultlinkpy)) |
+| $(row.operations)| $(row.timetakenjl)      |   $(row.timetakenpy) |
         
-        
-        """)
-        write(f, " </details>\n")
+""")
+        write(f, "</details>\n")
     end
 end
 # print(result[!,(result[!,:operations] == "dilate")])
