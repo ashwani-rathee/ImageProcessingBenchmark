@@ -8,6 +8,7 @@ function start_benchmark()
     #         ["", "", ""]timetaken - py = ["", "", ""],
     # )
     # ImageMorphology.jl
+
     println("ImageMorphology Benchmark")
     imagemorphologyjl = DataFrame(
         
@@ -20,7 +21,7 @@ function start_benchmark()
             "tophat",
             "bothat",
         ],
-        timetaken=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        timetakenjl=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
         resultlink=["/", "/", "/", "/", "/", "/"],
         timetakenpy=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
         resultlinkpy=["/", "/", "/", "/", "/", "/"],
@@ -33,7 +34,7 @@ function start_benchmark()
         benchmark = @benchmark getfield(Images, Symbol($i))($original)
         # print(benchmark)
         result = getfield(Images, Symbol(i))(original)
-        save("results/julia/$i.png", mosaicview(original, result))
+        save("results/julia/$i.png", result)
         imagemorphologyjl[!, 2][count] = minimum(benchmark).time * 10^-12 *10^3
         imagemorphologyjl[!, 3][count] = "results/julia/$i.png"
         count += 1

@@ -1,7 +1,7 @@
 ,operations,timetaken,resultlink,timetakenpy,resultlinkpy,py/jl
-0,dilate,0.003401445000000002,results/julia/dilate.png,0.05207436599812354,results/python/dilation.png,15.309483468973777
-1,erode,0.003362836000000002,results/julia/erode.png,0.04856407800252782,results/python/erosion.png,14.441405409757655
-2,opening,0.006431998000000004,results/julia/opening.png,0.09344368199890596,results/python/opening.png,14.527940151552581
-3,closing,0.006496331000000004,results/julia/closing.png,0.09636772100202506,results/python/closing.png,14.8341765531998
-4,tophat,0.0066382170000000035,results/julia/tophat.png,0.09498355100004119,results/python/white_tophat.png,14.308593858869202
-5,bothat,0.006615541000000003,results/julia/bothat.png,0.09485623000000487,results/python/black_tophat.png,14.338393488908137
+0,dilate,0.003355313000000002,results/julia/dilate.png,0.0623698070012324,results/python/dilation.png,18.58837223270448
+1,erode,0.003429673000000002,results/julia/erode.png,0.06215352400249685,results/python/erosion.png,18.122288627078095
+2,opening,0.006279829000000004,results/julia/opening.png,0.11221367700272822,results/python/opening.png,17.86890646269638
+3,closing,0.006290970000000003,results/julia/closing.png,0.09884949099796358,results/python/closing.png,15.712917244552674
+4,tophat,0.0065616970000000035,results/julia/tophat.png,0.09745509699860122,results/python/white_tophat.png,14.852117828452178
+5,bothat,0.006482273000000004,results/julia/bothat.png,0.09667396000077133,results/python/black_tophat.png,14.913589723970476
