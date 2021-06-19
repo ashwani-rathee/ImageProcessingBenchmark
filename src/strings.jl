@@ -17,3 +17,6 @@ Morphological operations can also be applied to greyscale images such that their
 transfer functions are unknown and therefore their absolute pixel values are of no or minor interest.
 
 """
+morphology1 = """
+asdasd
+"""

@@ -1,52 +1,132 @@
-# ImageProcessingBenchmark
+# Image Processing Benchmark
 
-```
-Welcome to Image Processing Benchmark!!
-JuliaImages Benchmark started!!
-ImageMorphology Benchmark
-6×5 DataFrame
- Row │ operations  timetaken  resultlink  timetakenpy  resultlinkpy 
-     │ String      Float64    String      Float64      String       
-─────┼──────────────────────────────────────────────────────────────
-   1 │ dilate            0.0  /                   0.0  /
-   2 │ erode             0.0  /                   0.0  /
-   3 │ opening           0.0  /                   0.0  /
-   4 │ closing           0.0  /                   0.0  /
-   5 │ tophat            0.0  /                   0.0  /
-   6 │ bothat            0.0  /                   0.0  /
-6×5 DataFrame
- Row │ operations  timetaken   resultlink                 timetakenpy  resultlinkpy 
-     │ String      Float64     String                     Float64      String       
-─────┼──────────────────────────────────────────────────────────────────────────────
-   1 │ dilate      0.00340145  results/julia/dilate.png           0.0  /
-   2 │ erode       0.00336284  results/julia/erode.png            0.0  /
-   3 │ opening     0.006432    results/julia/opening.png          0.0  /
-   4 │ closing     0.00649633  results/julia/closing.png          0.0  /
-   5 │ tophat      0.00663822  results/julia/tophat.png           0.0  /
-   6 │ bothat      0.00661554  results/julia/bothat.png           0.0  /
-Skimage Benchmark started!!
-  operations  timetaken                 resultlink  timetakenpy resultlinkpy
-0     dilate   0.003401   results/julia/dilate.png          0.0            /
-1      erode   0.003363    results/julia/erode.png          0.0            /
-2    opening   0.006432  results/julia/opening.png          0.0            /
-3    closing   0.006496  results/julia/closing.png          0.0            /
-4     tophat   0.006638   results/julia/tophat.png          0.0            /
-5     bothat   0.006616   results/julia/bothat.png          0.0            /
-benchmark.py:31: UserWarning: results/python/$i.png is a low contrast image
-  io.imsave("results/python/$i.png", result)
-  operations  timetaken                 resultlink  timetakenpy                     resultlinkpy
-0     dilate   0.003401   results/julia/dilate.png     0.052074      results/python/dilation.png
-1      erode   0.003363    results/julia/erode.png     0.048564       results/python/erosion.png
-2    opening   0.006432  results/julia/opening.png     0.093444       results/python/opening.png
-3    closing   0.006496  results/julia/closing.png     0.096368       results/python/closing.png
-4     tophat   0.006638   results/julia/tophat.png     0.094984  results/python/white_tophat.png
-5     bothat   0.006616   results/julia/bothat.png     0.094856  results/python/black_tophat.png
-  operations  timetaken                 resultlink  timetakenpy                     resultlinkpy      py/jl
-0     dilate   0.003401   results/julia/dilate.png     0.052074      results/python/dilation.png  15.309483
-1      erode   0.003363    results/julia/erode.png     0.048564       results/python/erosion.png  14.441405
-2    opening   0.006432  results/julia/opening.png     0.093444       results/python/opening.png  14.527940
-3    closing   0.006496  results/julia/closing.png     0.096368       results/python/closing.png  14.834177
-4     tophat   0.006638   results/julia/tophat.png     0.094984  results/python/white_tophat.png  14.308594
-5     bothat   0.006616   results/julia/bothat.png     0.094856  results/python/black_tophat.png  14.338393
+ImageProcessingBenchmark is a repository for benchmarking image processing projects written in various programming languages like julia, python and matlab etc.
 
-```
+Currently, The benchmark compares performance differences in JuliaImages projects with Skimage and its submodules.
+
+# Image morphology 
+Morphological image processing is a collection of non-linear operations related to the shape or morphology of features in an image.
+
+According to Wikipedia, morphological operations rely only on the relative ordering of pixel values, 
+not on their numerical values, and therefore are especially suited to the processing of binary images.
+
+Morphological operations can also be applied to greyscale images such that their light 
+transfer functions are unknown and therefore their absolute pixel values are of no or minor interest.
+
+<details>
+<summary>dilate</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| dilate| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/dilate.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/dilation.png) |
+| dilate|   NA     | 0.0010868889088331524      |   0.07937053399973593 |
+        
+</details>
+<details>
+<summary>erode</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| erode| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/erode.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/erosion.png) |
+| erode|   NA     | 0.000942642524791825      |   0.07744550200004596 |
+        
+</details>
+<details>
+<summary>opening</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| opening| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/opening.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/opening.png) |
+| opening|   NA     | 0.001748863396636301      |   0.1508079249997536 |
+        
+</details>
+<details>
+<summary>closing</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| closing| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/closing.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/closing.png) |
+| closing|   NA     | 0.0018109613454281575      |   0.15137137800002165 |
+        
+</details>
+<details>
+<summary>tophat</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| tophat| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/tophat.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/white_tophat.png) |
+| tophat|   NA     | 0.001941027497471802      |   0.15099994299998798 |
+        
+</details>
+<details>
+<summary>bothat</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| bothat| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/bothat.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/black_tophat.png) |
+| bothat|   NA     | 0.002088734538493725      |   0.14953793999984555 |
+        
+</details>
+# Image morphology1 
+Morphological image processing is a collection of non-linear operations related to the shape or morphology of features in an image.
+
+According to Wikipedia, morphological operations rely only on the relative ordering of pixel values, 
+not on their numerical values, and therefore are especially suited to the processing of binary images.
+
+Morphological operations can also be applied to greyscale images such that their light 
+transfer functions are unknown and therefore their absolute pixel values are of no or minor interest.
+
+<details>
+<summary>dilate</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| dilate| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/dilate.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/dilation.png) |
+| dilate|   NA     | 0.0010868889088331524      |   0.07937053399973593 |
+        
+</details>
+<details>
+<summary>erode</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| erode| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/erode.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/erosion.png) |
+| erode|   NA     | 0.000942642524791825      |   0.07744550200004596 |
+        
+</details>
+<details>
+<summary>opening</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| opening| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/opening.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/opening.png) |
+| opening|   NA     | 0.001748863396636301      |   0.1508079249997536 |
+        
+</details>
+<details>
+<summary>closing</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| closing| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/closing.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/closing.png) |
+| closing|   NA     | 0.0018109613454281575      |   0.15137137800002165 |
+        
+</details>
+<details>
+<summary>tophat</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| tophat| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/tophat.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/white_tophat.png) |
+| tophat|   NA     | 0.001941027497471802      |   0.15099994299998798 |
+        
+</details>
+<details>
+<summary>bothat</summary> 
+
+| Operations       | Original | Julia         | Python  |
+| -----------------|----------|:-------------:| -----:|
+| bothat| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/original.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/bothat.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/black_tophat.png) |
+| bothat|   NA     | 0.002088734538493725      |   0.14953793999984555 |
+        
+</details>

@@ -34,8 +34,8 @@ function start_benchmark()
         resultlinkpy=["/", "/", "/", "/", "/", "/"],
     )
     count = 1
-    original = TestImages.shepp_logan(512)
-
+    original = load("results/original.png")
+    # save("results/original.png", original)
     # println(imagemorphologyjl)
     for i in imagemorphologyjl[!, 2]
         benchmark = @benchmark getfield(Images, Symbol($i))($original)

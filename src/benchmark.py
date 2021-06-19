@@ -12,8 +12,8 @@ import pandas as pd
 
 morphology = "morphology"
 submodule = getattr(skimage,morphology)
-
-orig_phantom = img_as_ubyte(data.shepp_logan_phantom())
+original = io.imread("results/original.png")
+orig_phantom = img_as_ubyte(original)
 
 list = ["dilation","erosion","opening","closing","white_tophat","black_tophat"]
 data = pd.read_csv("result.csv")
@@ -30,7 +30,7 @@ for i in list:
     count +=1
     io.imsave("results/python/{}.png".format(i), result)
 
-print(data)
+# print(data)
 data.to_csv('result.csv')
 
 data["py/jl"] = data["timetakenpy"]/data["timetakenjl"]

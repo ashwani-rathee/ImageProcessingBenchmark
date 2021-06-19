@@ -4,3 +4,122 @@ ImageProcessingBenchmark is a repository for benchmarking image processing proje
 
 Currently, The benchmark compares performance differences in JuliaImages projects with Skimage and its submodules.
 
+# Image morphology 
+Morphological image processing is a collection of non-linear operations related to the shape or morphology of features in an image.
+
+According to Wikipedia, morphological operations rely only on the relative ordering of pixel values, 
+not on their numerical values, and therefore are especially suited to the processing of binary images.
+
+Morphological operations can also be applied to greyscale images such that their light 
+transfer functions are unknown and therefore their absolute pixel values are of no or minor interest.
+
+<details>
+<summary>dilate</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| dilate| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/dilate.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/dilation.png) |
+| dilate| 0.0011634867325554267      |   0.0908295320000434 |
+        
+</details>
+<details>
+<summary>erode</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| erode| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/erode.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/erosion.png) |
+| erode| 0.0010089615028351566      |   0.08186553000018648 |
+        
+</details>
+<details>
+<summary>opening</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| opening| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/opening.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/opening.png) |
+| opening| 0.0020555694594483337      |   0.15950707100000727 |
+        
+</details>
+<details>
+<summary>closing</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| closing| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/closing.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/closing.png) |
+| closing| 0.002078544901461379      |   0.1594595039998694 |
+        
+</details>
+<details>
+<summary>tophat</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| tophat| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/tophat.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/white_tophat.png) |
+| tophat| 0.002642249175625334      |   0.1605421879999085 |
+        
+</details>
+<details>
+<summary>bothat</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| bothat| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/bothat.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/black_tophat.png) |
+| bothat| 0.00208786151444119      |   0.15819581499999913 |
+        
+</details>
+# Image morphology1 
+asdasd
+<details>
+<summary>dilate</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| dilate| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/dilate.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/dilation.png) |
+| dilate| 0.0011634867325554267      |   0.0908295320000434 |
+        
+</details>
+<details>
+<summary>erode</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| erode| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/erode.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/erosion.png) |
+| erode| 0.0010089615028351566      |   0.08186553000018648 |
+        
+</details>
+<details>
+<summary>opening</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| opening| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/opening.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/opening.png) |
+| opening| 0.0020555694594483337      |   0.15950707100000727 |
+        
+</details>
+<details>
+<summary>closing</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| closing| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/closing.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/closing.png) |
+| closing| 0.002078544901461379      |   0.1594595039998694 |
+        
+</details>
+<details>
+<summary>tophat</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| tophat| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/tophat.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/white_tophat.png) |
+| tophat| 0.002642249175625334      |   0.1605421879999085 |
+        
+</details>
+<details>
+<summary>bothat</summary> 
+
+| Operations       | Julia         | Python  |
+| -----------------|:-------------:| -----:|
+| bothat| ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/julia/bothat.png) | ![](https://raw.githubusercontent.com/ashwani-rathee/ImageProcessingBenchmark/main/src/results/python/black_tophat.png) |
+| bothat| 0.00208786151444119      |   0.15819581499999913 |
+        
+</details>
