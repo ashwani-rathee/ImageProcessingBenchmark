@@ -20,3 +20,10 @@ transfer functions are unknown and therefore their absolute pixel values are of 
 morphology1 = """
 asdasd
 """
+
+dilatedesc = "Dilation adds pixels on the object boundaries."
+erodedesc = "Erosion removes pixels on object boundaries."
+openingdesc = "The opening operation erodes an image and then dilates the eroded image, using the same structuring element for both operations."
+closingdesc = "The closing operation dilates an image and then erodes the dilated image, using the same structuring element for both operations."
+tophatdesc = "The tophat of an image is defined as the image minus its morphological opening. This operation returns the bright spots of the image that are smaller than the structuring element."
+bothatdesc = "The black_tophat of an image is defined as its morphological closing minus the original image. This operation returns the dark spots of the image that are smaller than the structuring element."
