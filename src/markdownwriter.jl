@@ -28,21 +28,21 @@ for i in list
         write(
             f,
             "<details>
-<summary>$(uppercasefirst((row.operations))) : </summary> \n",
+<summary>$(uppercasefirst((row.operations))) ↴ </summary> \n",
         )
         write(f, content1[row.operations])
         write(
             f,
-            """
+            """\n
 
 | Operations       | Original | Julia         | Python  |
-| -----------------|----------|:-------------:| -----:|
+|:----------------:|:--------:|:-------------:|:-------:|
 | $(row.operations)| ![](./src/results/original.png) | ![](./src/$(row.resultlink)) | ![](./src/$(row.resultlinkpy)) |
-| Time Taken(in seconds)|   NA     | $(row.timetakenjl)      |   $(row.timetakenpy) |
+| Time Taken(in seconds)|   This is the original image used for benchmark     | $(row.timetakenjl)      |   $(row.timetakenpy) |
         
 """,
         )
-        write(f, "</details>\n")
+        write(f, "</details> \n\n")
     end
 end
 
