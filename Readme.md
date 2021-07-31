@@ -18,17 +18,15 @@ not on their numerical values, and therefore are especially suited to the proces
 Morphological operations can also be applied to greyscale images such that their light 
 transfer functions are unknown and therefore their absolute pixel values are of no or minor interest.
 
-<details>
-<summary>Dilate ↴ </summary> 
-Dilation adds pixels on the object boundaries.
+### Dilate :
 
+Dilation adds pixels on the object boundaries.
 
 | Operations       | Original | Julia         | Python  |
 |:----------------:|:--------:|:-------------:|:-------:|
 | dilate| ![](./src/results/original.png) | ![](./src/results/julia/dilate.png) | ![](./src/results/python/dilation.png) |
 | Time Taken(in seconds)|   This is the original image used for benchmark     | 0.0010868889088331524      |   0.07937053399973593 |
         
-</details> 
 
 <details>
 <summary>Erode ↴ </summary> 
