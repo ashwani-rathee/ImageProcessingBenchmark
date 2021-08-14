@@ -1,3 +1,7 @@
+using Pkg
+Pkg.activate(".")
+Pkg.instantiate()
+cd("src")
 using DataFrames, TestImages, PyCall, BenchmarkTools, Images
 using CSV
 function start_benchmark()
