@@ -9,8 +9,8 @@ f = open("../README.md", "w")
 
 # writing to a file using write() method
 write(f, introduction)
-list = ["morphology", "morphology1"]
-content = Dict("morphology" => morphology, "morphology1" => morphology)
+list = ["morphology"]
+content = Dict("morphology" => morphology)
 content1 = Dict(
     "dilate" => dilatedesc,
     "erode" => erodedesc,

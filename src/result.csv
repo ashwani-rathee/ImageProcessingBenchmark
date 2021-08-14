@@ -1,7 +1,7 @@
 ,type,operations,timetakenjl,resultlink,timetakenpy,resultlinkpy,py/jl
-0,morphology,dilate,0.001005834565893,results/julia/dilate.png,0.058367669000290334,results/python/dilation.png,58.02909442515565
-1,morphology,erode,0.0011615034174237,results/julia/erode.png,0.047367744000439416,results/python/erosion.png,40.78140734661337
-2,morphology,opening,0.0020665434300496,results/julia/opening.png,0.09100084500096273,results/python/opening.png,44.035292787811656
-3,morphology,closing,0.0020840932746243,results/julia/closing.png,0.09977033500035759,results/python/closing.png,47.87229833479657
-4,morphology,tophat,0.0021193165844651,results/julia/tophat.png,0.09390729000006104,results/python/white_tophat.png,44.310175595479784
-5,morphology,bothat,0.0021126072505289,results/julia/bothat.png,0.08857413899931998,results/python/black_tophat.png,41.92645792403916
+0,morphology,dilate,0.0010208595811142,results/julia/dilate.png,0.06084681900028954,results/python/dilation.png,59.60351465172057
+1,morphology,erode,0.0010233712737166,results/julia/erode.png,0.04374955000093905,results/python/erosion.png,42.75041827395921
+2,morphology,opening,0.0021581063675324,results/julia/opening.png,0.08658933300102944,results/python/opening.png,40.12282911710072
+3,morphology,closing,0.0020868577832636,results/julia/closing.png,0.08676055099931546,results/python/closing.png,41.57473101191983
+4,morphology,tophat,0.0019937310555111,results/julia/tophat.png,0.09380965799937258,results/python/white_tophat.png,47.05231316935279
+5,morphology,bothat,0.0020297383562423,results/julia/bothat.png,0.086672956998882,results/python/black_tophat.png,42.70154167029764

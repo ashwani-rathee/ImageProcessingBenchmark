@@ -11,5 +11,5 @@ cd src
 python benchmark.py
 
 
-echo Now writting the results!! to result.md
+echo Now writting the results!! to README.MD
 julia markdownwriter.jl
